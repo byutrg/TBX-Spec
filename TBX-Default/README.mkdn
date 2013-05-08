@@ -1,0 +1,4 @@
+##TBX-Default Validation
+TBX-Default is the largest dialect of TBX, containing all optional content. Every other dialect of TBX is a subset of TBX-Default.
+
+The core structure can be validated using the core structure DTD, and the values of the various data categories can be checked using the default XCS file and the TBXChecker.

@@ -1,0 +1,2 @@
+##TBX-Basic Validation
+TBX-Basic is a more limited dialect of TBX. It is intended to provide the data categories most commonly used in translation and localization work. The DTD and XCS files are subsets of the TBX-Default DTD and XCS files.
