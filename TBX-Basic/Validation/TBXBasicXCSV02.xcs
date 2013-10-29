@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?> 
-<!DOCTYPE TBXXCS SYSTEM "tbxxcsdtd.dtd"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TBXXCS SYSTEM "tbxxcsdtd.dtd">
 <TBXXCS name="Basic" version="2" lang="en">
-    <!-- Last updated: November 17, 2008. Address enquiries to: arle@lisa.org -->
+    <!-- Last updated: November 17, 2008. Address enquiries to: akmtrg@gmail.com -->
     <header>
         <title>TBX Basic XCS (extensible constraint specification) file Version 2 (Filename:
             TBXBasicXCSV02.XCS)</title>

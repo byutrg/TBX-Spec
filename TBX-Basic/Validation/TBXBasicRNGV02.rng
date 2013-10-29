@@ -3,12 +3,11 @@
    xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:rng="http://relaxng.org/ns/structure/1.0"
    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="">
    <!-- Schema generated from ODD source 2008-11-12T22:47:41.423-05:00. Modified from
-TBX_RNGV02.rng file for TBX-Basic by Kara Warburton on November 19, 2008. 
-Last updated on January 26, 2009 to allow a context sentence to occur in a descripGrp.
-Address all enquiries to kara@ca.ibm.com-->
+TBX_RNGV02.rng file for TBX-Basic by Kara Warburton on November 19, 2008.
+Last updated on October 2013 to change contact information.
+Address all enquiries to akmtrg@gmail.com-->
    <!-- This is the integrated Relax NG schema file for the TBX-Basic Terminology Markup Language.-->
-   <!-- This file is also available from the following Web site: http://www.lisa.org/fileadmin/standards/tbx_basic/TBXBasicRNGV02.rng-->
-   <!-- This file is controlled by LISA. If you make any changes to this file, you must change the file name.-->
+   <!-- This file is also available from the following Web site: https://github.com/byutrg/TBX-Spec/blob/master/TBX-Basic/Validation/TBXBasicRNGV02.rng-->
    <!-- Note: in order to enable validation of language codes used in the xml:lang attribute of the <langSet> elements, you must declare the languages that
       are used in your TBX-Basic document instance as shown on line 422. -->
 
@@ -39,13 +38,13 @@ Address all enquiries to kara@ca.ibm.com-->
          xmlns:sch="http://www.ascc.net/xml/schematron" xmlns:tei="http://www.tei-c.org/ns/1.0">
          <rng:choice>
             <rng:ref name="descrip"/>
-            <!-- in TBX-Basic, descripGrp is only used for definitions and as such it is not allowed at the term level.... but entity.auxInfo is.... so this restriction is 
+            <!-- in TBX-Basic, descripGrp is only used for definitions and as such it is not allowed at the term level.... but entity.auxInfo is.... so this restriction is
                established elsewhere via schematron rules.-->
             <rng:ref name="descripGrp"/>
             <rng:ref name="admin"/>
             <rng:ref name="transacGrp"/>
             <rng:ref name="note"/>
-            <!-- in TBX-Basic, ref and xref are not allowed at the language level.... but entity.auxInfo is.... so this restriction is established elsewhere via 
+            <!-- in TBX-Basic, ref and xref are not allowed at the language level.... but entity.auxInfo is.... so this restriction is established elsewhere via
                schematron rules.-->
             <rng:ref name="ref"/>
             <rng:ref name="xref"/>
@@ -421,7 +420,7 @@ Address all enquiries to kara@ca.ibm.com-->
             the language of the language section. This attribute is required for the langSet
             element. See also the description on the martif element.</a:documentation>
          <!-- to declare the languages used in a TBX-Basic document instance, specify the language codes as shown below. This sample markup should
-            be inserted to REPLACE the <text/> element. Substitute the values "en" and "de" with your own language code values, and add  more values as needed.  You can use any language code 
+            be inserted to REPLACE the <text/> element. Substitute the values "en" and "de" with your own language code values, and add  more values as needed.  You can use any language code
             format that is supported by IETF RFC 4646 or its successor.
             Sample markup starts here to replace <text/>
             <rng:choice>
@@ -526,7 +525,7 @@ Address all enquiries to kara@ca.ibm.com-->
          name="termNote_administrativeStatus">
          <sch:rule context="termNote[@type='administrativeStatus']">
             <sch:assert
-               test=".=         'preferredTerm-admn-sts' or .='admittedTerm-admn-sts' 
+               test=".=         'preferredTerm-admn-sts' or .='admittedTerm-admn-sts'
             or .='deprecatedTerm-admn-sts' or .='supersededTerm-admn-sts'"
                >The values of administrativeStatus must be one of: preferredTerm-admn-sts, admittedTerm-admn-sts,
                 deprecatedTerm-admn-sts, or supersededTerm-admn-sts. For TBX-Basic software applications, the display values can be simplified to:
@@ -574,7 +573,7 @@ Address all enquiries to kara@ca.ibm.com-->
          name="termNote_termType">
          <sch:rule context="termNote[@type='termType']">
             <sch:assert
-               test=". = 'abbreviation' or .='acronym' or .='fullForm' or .='variant' 
+               test=". = 'abbreviation' or .='acronym' or .='fullForm' or .='variant'
             or .='shortForm' or .='phrase'"
                >The type of term can only be one of the following values: abbreviation, acronym,
                fullForm, variant, shortForm, phrase.</sch:assert>
@@ -846,8 +845,9 @@ Address all enquiries to kara@ca.ibm.com-->
             <rng:value>XCSURI</rng:value>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The URI
                of the XCS file that constrains the content of the TBX document instance. You can
-               point to a local copy of the XCS file, or you can point to the copy on the LISA Web
-               site (http://www.lisa.org/fileadmin/standards/tbx_basic/TBXBasicXCSV02.XCS). Note: if
+               point to a local copy of the XCS file, or you can point to a copy on GitHub
+               (https://raw.github.com/byutrg/TBX-Spec/master/TBX-Basic/Validation/TBXBasicRNGV02.rng) or
+            elsewhere. Note: if
                you are using the Relax NG schema for validation, the XCS file is not used. However,
                to comply with the TBX standard (ISO 30042), a TBX-Basic document instance must have
                an XCS file for reference purposes.</a:documentation>
