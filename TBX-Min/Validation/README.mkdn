@@ -1,0 +1,8 @@
+##TBX-Min Validation
+
+There are two directories:
+
+* `schemas` contains the XSD and RNG schemas for validating TBX-Min documents.
+* `t` contains tests, written in Perl, that make certain that several document sample documents are validated by the schema.
+
+To run the tests, run `prove -v`. You may need to install some CPAN dependencies first.

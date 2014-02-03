@@ -1,0 +1,20 @@
+##TBX-Min
+
+TBX-Min is a minimal, DCT-style dialect of TBX. It's purpose is to
+represent extremely simple termbases, such as spreadsheets, and to
+be as human eye-friendly as possible. TBX-Min did not evolve from
+any other XML dialect, and so does not have historical artifacts
+such as "martif".
+
+DCT stands for "Data Category as Tag Name". Whereas in most TBX
+dialects categories such as C<partOfSpeech> are indicated through
+attributes, in TBX-Min the tag names represent categories. This
+makes for a very readable document. While TBX-Min documents do
+conform to TML (Terminological Markup Language) structure, DCT
+documents cannot be checked by the
+[TBX-Checker](https://sourceforge.net/projects/tbxutil/).
+
+If you need more complex or information-rich termbases, we suggest
+you use another dialect such as TBX-Basic or TBX-Default.
+
+[TBX::Min](http://metacpan.org/module/TBX::Min) can be used to edit TBX-Min documents programmatically. Modules are also available for round-trip conversion between TBX-Min, TBX-Basic, and UTX (see the TBX::Min documentation for links).
