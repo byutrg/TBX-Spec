@@ -51,29 +51,29 @@
   <xs:element name="body">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="entry"/>
+        <xs:element maxOccurs="unbounded" ref="termEntry"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="entry">
+  <xs:element name="termEntry">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element ref="subjectField"/>
-        <xs:element ref="langGroup"/>
+        <xs:element ref="langSet"/>
       </xs:choice>
       <xs:attribute name="id" use="required" type="xs:ID"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="subjectField" type="xs:string"/>
-  <xs:element name="langGroup">
+  <xs:element name="langSet">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="termGroup"/>
+        <xs:element maxOccurs="unbounded" ref="tig"/>
       </xs:sequence>
       <xs:attribute ref="xml:lang" use="required"/>
     </xs:complexType>
   </xs:element>
-  <xs:element name="termGroup">
+  <xs:element name="tig">
     <xs:complexType>
       <xs:all>
         <xs:element ref="term"/>
