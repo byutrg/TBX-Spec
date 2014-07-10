@@ -22,13 +22,13 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
@@ -46,13 +46,13 @@ __DATA__
         <license>CC BY license can be freely copied and modified</license>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
@@ -70,13 +70,13 @@ __DATA__
         <id>TBX sample</id>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
@@ -90,13 +90,13 @@ __DATA__
         <directionality>monodirectional</directionality>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
@@ -109,24 +109,24 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
-        <entry id="C003">
-            <langGroup xml:lang="en">
-                <termGroup>
+                </tig>
+            </langSet>
+        </termEntry>
+        <termEntry id="C003">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
-=== subjectField before langGroup
+=== subjectField before langSet
 --- input
 <?xml version='1.0' encoding="UTF-8"?>
 <TBX dialect="TBX-Min">
@@ -135,18 +135,18 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
+        <termEntry id="C002">
             <subjectField>whatever</subjectField>
-            <langGroup xml:lang="en">
-                <termGroup>
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
-=== subjectField after langGroup
+=== subjectField after langSet
 --- input
 <?xml version='1.0' encoding="UTF-8"?>
 <TBX dialect="TBX-Min">
@@ -155,18 +155,18 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
+                </tig>
+            </langSet>
             <subjectField>whatever</subjectField>
-        </entry>
+        </termEntry>
     </body>
 </TBX>
 
-=== multiple langGroups
+=== multiple langSets
 --- input
 <?xml version='1.0' encoding="UTF-8"?>
 <TBX dialect="TBX-Min">
@@ -175,22 +175,22 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-            <langGroup xml:lang="de">
-                <termGroup>
+                </tig>
+            </langSet>
+            <langSet xml:lang="de">
+                <tig>
                     <term>hund</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
-=== full termGroup
+=== full tig
 --- input
 <?xml version='1.0' encoding="UTF-8"?>
 <TBX dialect="TBX-Min">
@@ -199,21 +199,21 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
                     <note>cute!</note>
                     <termStatus>preferred</termStatus>
                     <customer>SAP</customer>
                     <partOfSpeech>noun</partOfSpeech>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
-=== different order in termGroup
+=== different order in tig
 --- input
 <?xml version='1.0' encoding="UTF-8"?>
 <TBX dialect="TBX-Min">
@@ -222,17 +222,17 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <partOfSpeech>noun</partOfSpeech>
                     <customer>SAP</customer>
                     <note>cute!</note>
                     <termStatus>preferred</termStatus>
                     <term>dog</term>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
@@ -245,34 +245,34 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
                     <partOfSpeech>noun</partOfSpeech>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <partOfSpeech>verb</partOfSpeech>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <partOfSpeech>adjective</partOfSpeech>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <partOfSpeech>adverb</partOfSpeech>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <partOfSpeech>properNoun</partOfSpeech>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <partOfSpeech>other</partOfSpeech>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
 
@@ -285,25 +285,25 @@ __DATA__
         <languages source="de" target="en"/>
     </header>
     <body>
-        <entry id="C002">
-            <langGroup xml:lang="en">
-                <termGroup>
+        <termEntry id="C002">
+            <langSet xml:lang="en">
+                <tig>
                     <term>dog</term>
                     <termStatus>preferred</termStatus>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <termStatus>admitted</termStatus>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <termStatus>notRecommended</termStatus>
-                </termGroup>
-                <termGroup>
+                </tig>
+                <tig>
                     <term>dog</term>
                     <termStatus>obsolete</termStatus>
-                </termGroup>
-            </langGroup>
-        </entry>
+                </tig>
+            </langSet>
+        </termEntry>
     </body>
 </TBX>
