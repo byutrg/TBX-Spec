@@ -60,12 +60,12 @@
    <define name="body">
       <element name="body">
          <oneOrMore>
-            <ref name="entry"/>
+            <ref name="termEntry"/>
          </oneOrMore>
       </element>
    </define>
-   <define name="entry">
-      <element name="entry">
+   <define name="termEntry">
+      <element name="termEntry">
          <attribute name="id">
             <data type="ID"/>
          </attribute>
@@ -76,23 +76,23 @@
                </element>
             </optional>
             <oneOrMore>
-               <ref name="langGroup"/>
+               <ref name="langSet"/>
             </oneOrMore>
          </interleave>
       </element>
    </define>
-   <define name="langGroup">
-      <element name="langGroup">
+   <define name="langSet">
+      <element name="langSet">
          <attribute name="xml:lang">
             <text/>
          </attribute>
          <oneOrMore>
-            <ref name="termGroup"/>
+            <ref name="tig"/>
          </oneOrMore>
       </element>
    </define>
-   <define name="termGroup">
-      <element name="termGroup">
+   <define name="tig">
+      <element name="tig">
          <interleave>
             <element name="term">
                <text/>
