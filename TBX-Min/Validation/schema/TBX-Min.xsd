@@ -77,7 +77,7 @@
     <xs:complexType>
       <xs:all>
         <xs:element ref="term"/>
-        <xs:element minOccurs="0" ref="note"/>
+        <xs:element minOccurs="0" ref="noteGrp"/>
         <xs:element minOccurs="0" ref="termStatus"/>
         <xs:element minOccurs="0" ref="customer"/>
         <xs:element minOccurs="0" ref="partOfSpeech"/>
@@ -85,7 +85,23 @@
     </xs:complexType>
   </xs:element>
   <xs:element name="term" type="xs:string"/>
-  <xs:element name="note" type="xs:string"/>
+  <xs:element name="noteGrp">
+   <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="note"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="note">
+   <xs:complexType>
+      <xs:all>
+        <xs:element ref="noteValue"/>
+        <xs:element minOccurs="0" ref="noteKey"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="noteValue" type="xs:string"/>
+  <xs:element name="noteKey" type="xs:string"/>
   <xs:element name="termStatus">
     <xs:simpleType>
       <xs:restriction base="xs:token">

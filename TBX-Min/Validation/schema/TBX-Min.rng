@@ -97,11 +97,9 @@
             <element name="term">
                <text/>
             </element>
-            <optional>
-               <element name="note">
-                  <text/>
-               </element>
-            </optional>
+            <zeroOrMore>
+	          <ref name="noteGrp" />
+	    </zeroOrMore>
             <optional>
                <element name="termStatus">
                   <choice>
@@ -131,5 +129,32 @@
             </optional>
          </interleave>
       </element>
+   </define>
+   <define name="noteGrp">
+      <optional>
+        <element name="noteGrp">
+      	   <interleave>
+       	      <optional>
+		 <oneOrMore>
+		    <ref name="note" />
+		 </oneOrMore>
+              </optional>
+            </interleave>
+        </element>
+      </optional>
+   </define>
+   <define name="note">
+     <element name="note">
+       <interleave>
+          <optional>
+       	    <element name="noteKey">			
+              <text/>
+            </element>
+          </optional>
+     	  <element name="noteValue">
+      	     <text/>
+          </element>
+       </interleave>
+     </element>
    </define>
 </grammar>
