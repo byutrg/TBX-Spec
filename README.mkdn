@@ -1,3 +1,7 @@
-##TBX Validation
+# OBSOLETE
+
+**This repository is now obsolete and does not support the latest version of TBX.  Please refer to [TBX Implementor](https://byutrg.github.io/TBX-Implementor/)**
+
+## TBX Validation
 
 This repository contains various schema (RNG and DTD, currently) which can be used for validating TBX files of different dialects.
